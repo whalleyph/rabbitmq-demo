@@ -6,7 +6,7 @@ async function doReceivingDemo() {
     const exchangeURL = getEnvironmentVariableOrFail("AMQP_EXCHANGE_URL");
     const conn = await connect(exchangeURL);
 
-    const queueName = "neill-tasks";
+    const queueName = "Paul-tasks";
     const channel = await conn.createChannel();
     await channel.assertQueue(queueName, { durable: false });
 
