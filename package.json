@@ -1,0 +1,20 @@
+{
+    "name": "rabbitmq-demo",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "start-receiver-1": "node src/promise-api-1/receive.js",
+        "start-sender-1": "node src/promise-api-1/send.js",
+        "start-receiver-2": "node --env-file=.env src/promise-api-2/receive.js",
+        "start-sender-2": "node --env-file=.env src/promise-api-2/send.js",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "amqplib": "^0.10.4"
+    },
+    "devDependencies": {
+        "prettier": "^3.3.2"
+    }
+}
